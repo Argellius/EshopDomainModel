@@ -29,10 +29,7 @@ class Stitek
      */
     private $Hodnota;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Polozka::class, mappedBy="Stitek")
-     */
-    private $polozkas;
+
 
     /**
      * @ORM\ManyToMany(targetEntity=Kategorie::class, mappedBy="Stitek")

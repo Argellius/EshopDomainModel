@@ -23,7 +23,7 @@ class Vyrobce
     private $Nazev;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Polozka::class, inversedBy="Vyrobce")
+     * @ORM\OneToMany(targetEntity=Polozka::class, inversedBy="Vyrobce")
      */
     private $polozka;
 

@@ -35,7 +35,7 @@ class Polozka
     private $Kategorie;
 
     /**
-     * @ORM\OneToMany(targetEntity=Vyrobce::class, mappedBy="polozka")
+     * @ORM\ManyToOne(targetEntity=Vyrobce::class, mappedBy="polozka")
      */
     private $Vyrobce;
 
@@ -50,9 +50,9 @@ class Polozka
     private $Stav;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Stitek::class, inversedBy="polozkas")
+     * @ORM\ManyToMany(targetEntity=HodnotaStitek::class, inversedBy="polozkas")
      */
-    private $Stitek;
+    private $HodnotaStitek;
 
     public function __construct()
     {

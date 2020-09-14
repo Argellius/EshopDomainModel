@@ -23,6 +23,11 @@ class HodnotaStitek
     private $Hodnota;
 
     /**
+     * @ORM\ManyToMany(targetEntity=Polozka::class, mappedBy="Stitek")
+     */
+    private $polozkas;
+
+    /**
      * @ORM\ManyToOne(targetEntity=Stitek::class, inversedBy="Hodnota")
      */
     private $stitek;
